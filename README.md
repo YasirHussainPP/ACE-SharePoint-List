@@ -35,7 +35,7 @@ An **Adaptive Card Extension (ACE)** for SharePoint that allows users to:
 ![Properties Panel](src/adaptiveCardExtensions/helloWorld/assets/Properties_panel.png)
 
 ### Add Item Dialog
-![Add Item](src/adaptiveCardExtensions/helloWorld/assets/Add_item.png)
+![Add Item](src/adaptiveCardExtensions/helloWorld/assets/Add_Item.png)
 
 ---
 
