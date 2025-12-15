@@ -39,7 +39,7 @@ An **Adaptive Card Extension (ACE)** for SharePoint that allows users to:
 
 ---
 
-## 4BB Tech Stack
+## Tech Stack
 
 - **SharePoint Framework (SPFx)**: `1.21.1`
 - **Adaptive Card Extensions Base**: `@microsoft/sp-adaptive-card-extension-base`
@@ -83,7 +83,7 @@ An **Adaptive Card Extension (ACE)** for SharePoint that allows users to:
 
 ---
 
-## 680 Getting Started
+##  Getting Started
 
 ```bash
 npm install
