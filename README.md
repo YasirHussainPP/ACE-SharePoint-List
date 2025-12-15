@@ -115,7 +115,7 @@ Example JSON:
 
 
 
-##7️ Build & Deploy
+## 7️ Build & Deploy
 
 ```bash
 gulp bundle --ship
