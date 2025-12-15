@@ -1,73 +1,131 @@
-# first-share-point-adaptive-card
+# SPFx Adaptive Card Extension: Dynamic SharePoint List Viewer & Adder
 
-## Summary
-
-Short summary on functionality and used technologies.
-
-[picture of the solution in action, if possible]
-
-## Used SharePoint Framework Version
-
-![version](https://img.shields.io/badge/version-1.21.1-green.svg)
-
-## Applies to
-
-- [SharePoint Framework](https://aka.ms/spfx)
-- [Microsoft 365 tenant](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
-
-> Get your own free development tenant by subscribing to [Microsoft 365 developer program](http://aka.ms/o365devprogram)
-
-## Prerequisites
-
-> Any special pre-requisites?
-
-## Solution
-
-| Solution    | Author(s)                                               |
-| ----------- | ------------------------------------------------------- |
-| folder name | Author details (name, company, twitter alias with link) |
-
-## Version history
-
-| Version | Date             | Comments        |
-| ------- | ---------------- | --------------- |
-| 1.1     | March 10, 2021   | Update comment  |
-| 1.0     | January 29, 2021 | Initial release |
-
-## Disclaimer
-
-**THIS CODE IS PROVIDED _AS IS_ WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.**
+An **Adaptive Card Extension (ACE)** for SharePoint that allows users to:
+- Display a **left icon** and **title** in the same row.
+- Show a **View Items in <Dynamic List Name>** button.
+- Add new items to a SharePoint list via an **Add Item** button.
 
 ---
 
-## Minimal Path to Awesome
+## ✨ Features
 
-- Clone this repository
-- Ensure that you are at the solution folder
-- in the command-line run:
-  - **npm install**
-  - **gulp serve**
+- **Dynamic List Integration**:
+  - Configure **SharePoint List ID** in the Property Pane.
+  - The list must have **Title** and **Description** columns.
+- **Card Size Options**:
+  - Large or Medium (configurable).
+- **View Items**:
+  - Opens a dialog showing all list items (Title & Description).
+  - Navigate items using **Next** and **Previous** icons.
+- **Add Item**:
+  - Opens a form to add new Title and Description to the list.
 
-> Include any additional steps as needed.
+---
+---
 
-## Features
+## 🖼️ Screenshots
 
-Description of the extension that expands upon high-level summary above.
+### Card View
+![Card View](src/adaptiveCardExtensions/helloWorld/assets/Card.png)
 
-This extension illustrates the following concepts:
+### Quick View Dialog
+![Quick View](src/adaptiveCardExtensions/helloWorld/assets/Quick_View.png)
 
-- topic 1
-- topic 2
-- topic 3
+### Properties Panel
+![Properties Panel](src/adaptiveCardExtensions/helloWorld/assets/Properties_panel.png)
 
-> Notice that better pictures and documentation will increase the sample usage and the value you are providing for others. Thanks for your submissions advance.
+### Add Item Dialog
+![Add Item](src/adaptiveCardExtensions/helloWorld/assets/Add_item.png)
 
-> Share your web part with others through Microsoft 365 Patterns and Practices program to get visibility and exposure. More details on the community, open-source projects and other activities from http://aka.ms/m365pnp.
+---
 
-## References
+## 4BB Tech Stack
 
-- [Getting started with SharePoint Framework](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-developer-tenant)
-- [Building for Microsoft teams](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/build-for-teams-overview)
-- [Use Microsoft Graph in your solution](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/using-microsoft-graph-apis)
-- [Publish SharePoint Framework applications to the Marketplace](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/publish-to-marketplace-overview)
-- [Microsoft 365 Patterns and Practices](https://aka.ms/m365pnp) - Guidance, tooling, samples and open-source controls for your Microsoft 365 development
+- **SharePoint Framework (SPFx)**: `1.21.1`
+- **Adaptive Card Extensions Base**: `@microsoft/sp-adaptive-card-extension-base`
+- **TypeScript**: `~5.3.3`
+- **Gulp**: `4.0.2`
+
+### Dependencies
+```json
+"dependencies": {
+  "tslib": "2.3.1",
+  "@microsoft/sp-core-library": "1.21.1",
+  "@microsoft/sp-property-pane": "1.21.1",
+  "@microsoft/sp-adaptive-card-extension-base": "1.21.1"
+}
+```
+
+### Dev Dependencies
+```json
+"devDependencies": {
+  "@microsoft/rush-stack-compiler-5.3": "0.1.0",
+  "@rushstack/eslint-config": "4.0.1",
+  "@microsoft/eslint-plugin-spfx": "1.21.1",
+  "@microsoft/eslint-config-spfx": "1.21.1",
+  "@microsoft/sp-build-web": "1.21.1",
+  "@types/webpack-env": "~1.15.2",
+  "ajv": "^6.12.5",
+  "eslint": "8.57.1",
+  "gulp": "4.0.2",
+  "typescript": "~5.3.3",
+  "@microsoft/sp-module-interfaces": "1.21.1"
+}
+```
+
+---
+
+## ✅ Prerequisites
+
+- Node.js (Recommended: **18.x LTS**)
+- Gulp CLI
+- Office 365 tenant with App Catalog
+
+---
+
+## 680 Getting Started
+
+```bash
+npm install
+gulp trust-dev-cert
+gulp serve
+```
+
+Open local or SharePoint workbench to test.
+
+---
+
+## ⚙️ Property Pane Configuration
+
+- **Card Properties**:
+  - Title
+  - Icon
+  - Size (Large, Medium)
+  - SharePoint List ID
+
+Example JSON:
+```json
+{
+  "title": "Project Tasks",
+  "icon": "TaskLogo",
+  "size": "Large",
+  "listId": "<GUID-of-your-list>"
+}
+```
+
+
+
+## 3D7️ Build & Deploy
+
+```bash
+gulp bundle --ship
+gulp package-solution --ship
+```
+
+Upload `.sppkg` to App Catalog and deploy.
+
+---
+
+## 4DC License
+
+MIT License
