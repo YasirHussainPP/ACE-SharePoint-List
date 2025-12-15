@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "first-share-point-adaptive-card-client-side-solution",
+    "id": "a0ab909d-7f41-480b-9ce4-0e0af09e9b9d",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.21.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "first-share-point-adaptive-card description"
+      },
+      "longDescription": {
+        "default": "first-share-point-adaptive-card description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "first-share-point-adaptive-card Feature",
+        "description": "The feature that activates elements of the first-share-point-adaptive-card solution.",
+        "id": "2c17d08c-9b68-4299-b781-9f7a5e972d69",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/first-share-point-adaptive-card.sppkg"
+  }
+}

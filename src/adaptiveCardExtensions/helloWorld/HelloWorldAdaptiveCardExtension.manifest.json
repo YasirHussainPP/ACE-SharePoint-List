@@ -1,0 +1,23 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/adaptive-card-extension-manifest.schema.json",
+  "id": "ec6b3104-ec90-42a5-b6eb-52e7e7b71e54",
+  "alias": "HelloWorldAdaptiveCardExtension",
+  "componentType": "AdaptiveCardExtension",
+
+  
+  "version": "*",
+  "manifestVersion": 2,
+
+   "requiresCustomScript": false,
+  "supportedHosts": ["Dashboard"],
+  "preconfiguredEntries": [{
+    "groupId": "bd067b1e-3ad5-4d5d-a5fe-505f07d7f59c", 
+    "title": { "default": "HelloWorld" },
+    "description": { "default": "HelloWorld description" },
+    "iconImageUrl": "https://res.cdn.office.net/files/fabric-cdn-prod_20240610.001/assets/brand-icons/product-monoline/svg/vivaconnections_32x1.svg",
+    "properties": {
+      "title": "HelloWorld"
+    },
+    "cardSize": "Large"
+  }]
+}
