@@ -115,7 +115,7 @@ Example JSON:
 
 
 
-## 3D7️ Build & Deploy
+##7️ Build & Deploy
 
 ```bash
 gulp bundle --ship
@@ -126,6 +126,6 @@ Upload `.sppkg` to App Catalog and deploy.
 
 ---
 
-## 4DC License
+## License
 
 MIT License
